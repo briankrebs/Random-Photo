@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "com.brianckrebs.randomphoto"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        debug {
+
+        }
+        release {
+            storeFile file("keystore/release.jks")
+            storePassword "r@ndomPhoto123"
+            keyPassword "r@ndomPhoto123"
+            keyAlias "RandomPhotoReleaseKey"
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            runProguard false
+            applicationIdSuffix ".debug"
+        }
+        release {
+            signingConfig signingConfigs.release
+            debuggable false
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:19.0.1'
+    compile 'com.squareup:otto:1.3.+'
+    compile 'com.squareup.picasso:picasso:2.3.+'
+    compile 'com.squareup.retrofit:retrofit:1.6.+'
+}

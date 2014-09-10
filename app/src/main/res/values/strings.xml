@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Random Photo</string>
+
+    <string name="loading">Loading...</string>
+    <string name="ok">OK</string>
+
+    <string name="share_send_to">Share Photo To:</string>
+
+    <string name="menu_item_share">Share</string>
+    <string name="menu_item_next">Next</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="title_dog">Dogs</string>
+    <string name="title_baby_pig">Baby Pigs</string>
+    <string name="title_cat">Cats</string>
+    <string name="title_kitten">Kittens</string>
+
+    <string name="error_display_image_title">Unable to Display Image</string>
+    <string name="error_display_image_message">We are unable to display this image at this time. Click OK for the next image.</string>
+
+</resources>
