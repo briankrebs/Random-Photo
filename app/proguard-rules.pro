@@ -16,6 +16,18 @@
 #   public *;
 #}
 
+-keepattributes Signature
+-keepattributes *Annotation*
+
+#enum
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#random photo
+-keep class com.brianckrebs.randomphoto.** { *; }
+
 #otto
 -keepclassmembers class ** {
     @com.squareup.otto.Subscribe public *;
